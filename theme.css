@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,900&display=swap');
+
+:root {
+  --root-size: 16px; /*  16px is default browser fallback */
+  --color-grey-dark: #1c1c1c;
+  --color-grey-medium: #292929;
+  --color-grey: #353535;
+  --color-grey-light: #656565;
+  --color-white: #fff;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: var(--root-size);
+  font-weight: 400;
+  color: var(--color-white);
+  background: var(--color-grey-dark);
+  margin: 0;
+}
+
+.image {
+  max-width: 100%;
+  height: auto;
+}
+
+.contact, .app-header, .articles, .app-footer {
+  padding: 0.5rem 2rem;
+}
+
+.app-header {
+  background: var(--color-grey-medium);
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.app-header > .app-header-navigation {
+  flex: 1 100%;
+}
+
+.app-header ul {
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.app-header-logo {
+  background: var(--color-grey-dark);
+  height: 1.5rem;
+  width: 1.5rem;
+  padding: 2rem;
+  margin: 1.5rem;
+  border-radius: 100%;
+}
+
+.app-header-navigation {
+}
+
+.articles {
+}
+
+.article {
+  margin: 2rem 0;
+}
