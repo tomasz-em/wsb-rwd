@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,900&display=swap');
 
 :root {
   --root-size: 16px; /*  16px is default browser fallback */
@@ -7,15 +7,27 @@
   --color-grey: #353535;
   --color-grey-light: #656565;
   --color-white: #fff;
+
+  /* --size-mobile: 500px; CANNOT TO THAT */
 }
 
 body {
   font-family: 'Roboto', sans-serif;
   font-size: var(--root-size);
-  font-weight: 400;
+  font-weight: 300;
   color: var(--color-white);
   background: var(--color-grey-dark);
   margin: 0;
+  position: relative;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  position: relative;
 }
 
 .image {
@@ -28,10 +40,10 @@ body {
 }
 
 .app-header {
-  background: var(--color-grey-medium);
-  padding: 0;
   display: flex;
   align-items: center;
+  flex-direction: column;
+  background: var(--color-grey-medium);
 }
 
 .app-header > .app-header-navigation {
@@ -41,26 +53,83 @@ body {
 .app-header ul {
   display: flex;
   justify-content: space-around;
-  margin: 0;
+  /* flex-direction: column; */
   padding-left: 0;
   list-style: none;
 }
 
-.app-header-logo {
+.app-header li {
+  margin: 0.5rem 0.75rem;
+  text-align: center;
+}
+
+.app-header a {
+  color: var(--color-grey-light);
+  /* text-decoration: none; */
+  letter-spacing: 1px;
+  font-weight: 300;
+  font-size: 0.8rem;
+}
+
+.app-header .app-header-logo {
   background: var(--color-grey-dark);
   height: 1.5rem;
   width: 1.5rem;
   padding: 2rem;
   margin: 1.5rem;
   border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.app-header-navigation {
+.app-header .app-header-logo:hover {
+  cursor: pointer;
+  color: var(--color-grey);
 }
 
-.articles {
+.app-header .app-header-logo-text {
+  margin: 0;
+  font-weight: 700;
+  font-size: 0.8rem;
+  transition: color 0.3s;
 }
 
 .article {
   margin: 2rem 0;
+  color: var(--color-grey-light);
+}
+
+.article .article-content {
+  display: flex;
+  font-size: 1.1rem;
+}
+
+.article .article-content p {
+  color: var(--color-white);
+}
+
+.article .article-content img {
+  border-radius: 1rem;
+  margin: 0.5rem;
+}
+
+.app-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Tablet */
+@media screen and (min-width: 500px) {
+  .app-header {
+    flex-direction: row;
+  }
+}
+
+/* Tablet */
+@media screen and (max-width: 1024px) {
+  .article .article-content {
+    flex-direction: column;
+  }
 }
