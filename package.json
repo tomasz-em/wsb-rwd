@@ -2,11 +2,21 @@
   "name": "rwd",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "develop": "webpack-dev-server --config webpack.config.js"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "private": true,
+  "license": "ISC",
+  "dependencies": {
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.1",
+    "autoprefixer": "^9.7.3",
+    "css-loader": "^3.4.0",
+    "postcss-loader": "^3.0.0",
+    "style-loader": "^1.1.2"
+  }
 }
